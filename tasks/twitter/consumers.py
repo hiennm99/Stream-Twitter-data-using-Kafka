@@ -40,7 +40,5 @@ if __name__ == '__main__':
     print(f"Total {df_row} messages received!!!")
     df=pd.DataFrame(data=results,columns=['Created_at','User_name','Tweet'])
     df.to_parquet('/home/hiennm/Projects/Airflow/dags/data/Twitter/results.parquet')
-    df.to_pickle('/home/hiennm/Projects/Airflow/dags/data/Twitter/results.pickle')
-    df.to_pickle('/home/hiennm/Projects/Airflow/dags/data/Twitter/results.pkl')
-    print("Insert into pickle file successfully")
+    print("Created parquet file successfully")
     
