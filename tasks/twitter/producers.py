@@ -37,7 +37,7 @@ class StreamListener(tweepy.Stream):
         try:   
             message=to_dict(status.created_at,status.user.screen_name,status.text)
             print(message)
-            producer.send('twitter',message)
+            producer.send('test',message)
             producer.flush()
             self.tweets+=1
             if self.tweets<self.limit:
